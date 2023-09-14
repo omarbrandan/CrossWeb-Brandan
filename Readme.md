@@ -1,4 +1,8 @@
-En esta entrega, que se remite a una pagína web de crossfit, hay cuatro secciones:
+Es una página web donde fans de CrossFit, en un estilo de blog pero acotado, pueden sugerir atletas de la élite del mundo competitivo de este deporte que no están registrados en la página oficial de CrossFit, los cuales se merecen estar ahí.
+También funciona para sugerencias de competencias que están emergiendo y actualmente no se las conoce, así un atleta que quiera competir esté en conocimiento de todos los torneos.
+Y por último, para sugerencias de productos que no están publicados en ninguna página oficial y que son necesarios para el entrenamiento diario. Usualmente serían productos nuevos que buscan reemplazar a los tradicionales con ofertas disruptivas.
+
+Hay cuatro secciones:
 
 Inicio;
 Competitions, son las competencias de la temporada;

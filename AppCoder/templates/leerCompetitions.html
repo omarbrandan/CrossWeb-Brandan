@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <ul>
+
+        {% for competition in competitions %}
+            <li>{{competition}}</li>
+            <div>
+                <form action="{% url 'EliminaCompetitions' competition.id %}" method="post">{% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+                <button>
+                    <a href="{% url 'EditarCompetitions' competition.id %}">Actualizar</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaCompetitions' %}">Crear Competition</a>
+
+{% endblock %}

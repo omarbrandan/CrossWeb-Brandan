@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <ul>
+
+        {% for store in store %}
+            <li>{{store}}</li>
+            <div>
+                <form action="{% url 'EliminaStore' store.id %}" method="post">{% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+                <button>
+                    <a href="{% url 'EditarStore' store.id %}">Actualizar</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaStore' %}">Crear Producto</a>
+
+{% endblock %}

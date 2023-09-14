@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <ul>
+
+        {% for athlete in athletes %}
+            <li>{{athlete}}</li>
+            <div>
+                <form action="{% url 'EliminaAthletes' athlete.id %}" method="post">{% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+                <button>
+                    <a href="{% url 'EditarAthletes' athlete.id %}">Actualizar</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaAthletes' %}">Crear Athlete</a>
+
+{% endblock %}
+    
