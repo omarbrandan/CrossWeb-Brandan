@@ -4,6 +4,18 @@
         <a class="navbar-brand" href="{% url 'ListaCompetitions' %}">Competitions</a>
         <a class="navbar-brand" href="{% url 'ListaAthletes' %}">Athletes</a>
         <a class="navbar-brand" href="{% url 'ListaStore' %}">Store</a>
-        <a class="btn btn-primary" href="#signup">Sign Up</a>
+        <a class="navbar-brand" href="{% url 'EditarPerfil' %}">{{user.username}}</a>
+        
+        {% if user.is_authenticated %}
+            
+            {% if url %}
+                <img src="{{url}}" height="30px" alt="avatar">
+            {% endif %}
+                
+            <a class="btn btn-primary" href="{% url 'Logout' %}">Logout</a> 
+        {% else %}
+            <a class="btn btn-primary" href="{% url 'Login' %}">Login</a> 
+        {% endif %}
+            
     </div>
 </nav>

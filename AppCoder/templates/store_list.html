@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <h2>¡New Products!</h2>
+
+    <ul>
+
+        {% for store in store %}
+            <li>
+                <a href="{% url 'DetalleStore' store.id %}">{{store}}</a>
+            </li>
+            <div>
+                <button>
+                    <a href="{% url 'EliminaStore' store.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'ActualizaStore' store.id %}">Actualizar</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaStore' %}">Crear Producto</a>
+
+{% endblock %}

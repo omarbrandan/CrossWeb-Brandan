@@ -16,3 +16,4 @@ class StoreAdmin(admin.ModelAdmin):
 admin.site.register(Athlete, AthleteAdmin)
 admin.site.register(Competitions, CompetitionsAdmin)
 admin.site.register(Store, StoreAdmin)
+admin.site.register(Avatar)

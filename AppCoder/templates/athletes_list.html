@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <h2>Athletes '23</h2>
+
+    <ul>
+
+        {% for athletes in athletes %}
+            <li>{{athletes}}</li>
+            <div>
+                <button>
+                    <a href="{% url 'EliminaAthletes' athletes.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'ActualizaAthletes' athletes.id %}">Actualizar</a>
+                </button>
+            </div>
+        {% endfor %}
+
+    </ul>
+    <a href="{% url 'CreaAthletes' %}">Crear Athlete</a>
+
+{% endblock %}

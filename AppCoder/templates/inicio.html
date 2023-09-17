@@ -1,7 +1,18 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
+
+    <h6>{{mensaje}}</h6>
+
+    <p></p>
      
-    <p>{{mensaje}}</p>
+    <p>Si desea buscar a un atleta:</p>
+
+    <form action="{% url 'Buscar' %}" method="get">
+
+        <p>Apellido: <input type="text" name="apellido" id=""></p>
+
+        <button type="submit">Buscar</button>
+    </form>
 
 {% endblock %}

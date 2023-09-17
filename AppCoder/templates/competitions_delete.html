@@ -1,0 +1,13 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <form method="post">{% csrf_token %}
+
+        <p>¿Está seguro de eliminar la competición?</p>
+
+        <button type="submit">Confirmar</button>
+        <button><a href="{% url 'ListaCompetitions' %}">Cancelar</a></button>
+    </form>
+
+{% endblock %}
