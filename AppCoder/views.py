@@ -132,13 +132,18 @@ def busqueda_apellido(req):
 
 def buscar(req):
 
-    if req.GET["apellido"]:
-        apellido = req.GET["apellido"]
-        athletes = Athlete.objects.get(apellido=apellido)
-        return render(req, "resultado_busqueda.html", {"athletes": athletes})
+    try:
+
+        if req.GET["apellido"]:
+            apellido = req.GET["apellido"]
+            athletes = Athlete.objects.get(apellido=apellido)
+            return render(req, "resultado_busqueda.html", {"athletes": athletes})
         
-    else:
-        return HttpResponse('No escribiste ningún apellido')
+        else:
+            return render(req, "inicio.html")
+    
+    except:
+        return render(req, "busqueda_fallida.html")
     
 def lista_athletes(req):
 
@@ -529,3 +534,7 @@ def agregar_avatar(req):
 def about(req):
 
     return render(req, "about.html")
+
+def busqueda_fallida(req):
+
+    return render(req, "busqueda_fallida.html")
