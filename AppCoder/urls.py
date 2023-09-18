@@ -45,5 +45,5 @@ urlpatterns = [
     path('editar-perfil/', editar_perfil, name='EditarPerfil'),
     path('agregar-avatar/', agregar_avatar, name='AgregarAvatar'),
     path('about/', about, name='About'),
-    path('busqueda-fallida', busqueda_fallida, name='BusquedaFallida'),
+    path('busqueda-fallida/', busqueda_fallida, name='BusquedaFallida'),
 ]
